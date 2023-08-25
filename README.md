@@ -20,8 +20,7 @@ It also uses the AWS SDK, in order to store the data to an S3 compatible storage
 | `STORAGE_URI`   | [Keyv](https://github.com/jaredwray/keyv) connection string, example: `redis://user:pass@localhost:6379`. Availabe Keyv storage adapter: redis, mongo, postgres and mysql  | `""` (in memory **non-persistent**) |
 | `LOG_LEVEL`     | Log level (`debug`, `verbose`, `log`, `warn`, `error`)       | `warn`           |
 | `BODY_LIMIT`    | Payload size limit for scenes or images                      | ``               |
-
-The following enviroment variables or only used if the `ENABLE_S3_BACKEND` is set `true`
-| `EXCALIDRAW_S3_BUCKET_NAME`    | The S3 Bucket                                 | ``               |
-| `EXCALIDRAW_S3_ACCESS_KEY_ID`    | The S3 Access Key Id                        | ``               |
-| `EXCALIDRAW_S3_SECRET_ACCESS_KEY`    | The S3 Secret Access Key                | ``               |
+| `ENABLE_S3_BACKEND`    | Specify if S3 is to be used                      | `false`               |
+| `EXCALIDRAW_S3_BUCKET_NAME`   | The S3 Bucket |
+| `EXCALIDRAW_S3_ACCESS_KEY_ID`     | The S3 Access Key Id       | `warn`           |
+| `EXCALIDRAW_S3_SECRET_ACCESS_KEY`    | The S3 Secret Access Key                      | ``               |
