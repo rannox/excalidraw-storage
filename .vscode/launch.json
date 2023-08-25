@@ -1,0 +1,42 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Node.js: debug server-side",
+        "type": "node-terminal",
+        "request": "launch",
+        "command": "yarn start:dev",
+        "env": {
+            "ENABLE_S3_BACKEND": "true",
+            "EXCALIDRAW_S3_ACCESS_KEY_ID": "minioadmin",
+            "EXCALIDRAW_S3_SECRET_ACCESS_KEY": "minioadmin",
+            "EXCALIDRAW_S3_BUCKET_NAME": "excalidraw",
+            "STORAGE_URI": "http://172.19.163.33:9000"
+        }        
+      },
+      {
+        "name": "Node.js: debug client-side",
+        "type": "chrome",
+        "request": "launch",
+        "url": "http://localhost:3000"
+      },
+      {
+        "name": "Node.js: debug full stack",
+        "type": "node-terminal",
+        "request": "launch",
+        "command": "yarn start:dev",
+        "serverReadyAction": {
+          "pattern": "started server on .+, url: (https?://.+)",
+          "uriFormat": "%s",
+          "action": "debugWithChrome"
+        },
+        "env": {
+          "ENABLE_S3_BACKEND": "true",
+          "EXCALIDRAW_S3_ACCESS_KEY_ID": "minioadmin",
+          "EXCALIDRAW_S3_SECRET_ACCESS_KEY": "minioadmin",
+          "EXCALIDRAW_S3_BUCKET_NAME": "excalidraw",
+          "STORAGE_URI": "http://172.19.163.33:9000"
+        }
+      }
+    ]
+  }
